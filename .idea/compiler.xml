@@ -9,5 +9,8 @@
         <module name="Prova02" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Prova2" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

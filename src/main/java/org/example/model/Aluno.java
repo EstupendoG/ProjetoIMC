@@ -134,5 +134,8 @@ public class Aluno {
         escritor.newLine();
         escritor.newLine();
         escritor.close();
+
+        System.out.println("Registro Concluído!");
+        System.out.println("");
     }
 }
