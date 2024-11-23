@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="43.0" layoutY="42.0" prefHeight="123.0" prefWidth="231.0" style="-fx-wrap-text: true; -fx-line-spacing: -10;" text="INDÍCE MASSA CORPORAL" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Century Schoolbook Bold" size="37.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="166.0" text="Faça o Cálculo:" textFill="WHITE">
+         <font>
+            <Font name="Helvetica" size="19.0" />
+         </font>
+      </Label>
+      <TextField layoutX="43.0" layoutY="228.0" maxHeight="22.0" minHeight="0.0" prefWidth="231.0" promptText="Digite aqui" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+         <font>
+            <Font size="10.0" />
+         </font></TextField>
+      <Label layoutX="43.0" layoutY="210.0" prefHeight="17.0" prefWidth="231.0" text="Nome" textFill="WHITE">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="43.0" layoutY="274.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="113.0" promptText="DDMMYYYY" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label layoutX="43.0" layoutY="256.0" prefHeight="17.0" prefWidth="113.0" text="Nascimento" textFill="WHITE">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="161.0" layoutY="274.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="113.0" promptText="00000000000" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label layoutX="161.0" layoutY="256.0" prefHeight="17.0" prefWidth="113.0" text="CPF" textFill="WHITE">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="43.0" layoutY="327.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="113.0" promptText="00.00" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label layoutX="43.0" layoutY="309.0" prefHeight="17.0" prefWidth="113.0" text="Peso" textFill="WHITE">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="160.0" layoutY="327.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="113.0" promptText="0.00" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
+      <Label layoutX="161.0" layoutY="309.0" prefHeight="17.0" prefWidth="113.0" text="Altura" textFill="WHITE">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
