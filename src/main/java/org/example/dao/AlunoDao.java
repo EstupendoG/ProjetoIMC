@@ -7,7 +7,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class AlunoDao {
 
@@ -17,95 +18,113 @@ public class AlunoDao {
         this.conn = new ConnectionFactory().getConnection();
     };
 
-    public void inserirAluno(Aluno aluno){
+    public String inserirAluno(Aluno aluno){
         System.out.println("Inserindo...");
         String sql = "INSERT INTO tb_aluno(al_cpf, al_nome, al_nascimento, al_peso, al_altura) VALUES (?, ?, ?, ?, ?)";
+        String res = "";
         try {
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, aluno.getCpf());
             stmt.setString(2, aluno.getNome());
-            stmt.setString(3, aluno.getDataNascimento());
+
+            LocalDate dataNascimento = LocalDate.parse(aluno.getDataNascimento(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            stmt.setString(3, dataNascimento.toString());
+
             stmt.setDouble(4, aluno.getPeso());
             stmt.setDouble(5, aluno.getAltura());
+            stmt.executeUpdate();
+            stmt.close();
+
+            res = "Inserção Concluída!";
+        }
+        catch (SQLException e) {
+            res = "Erro na inserção: " + e;
+            throw new RuntimeException(e);
+        }
+        return res;
+    }
+
+
+
+    public String excluirAluno(String cpf){
+        System.out.println("Excluíndo...");
+        String sql = "DELETE FROM tb_aluno WHERE al_cpf = ?";
+        String res = "";
+        try {
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, cpf);
             stmt.execute();
             stmt.close();
 
-            System.out.println("Inserção Concluída!");
+            res = "Exclusão Concluída!";
         }
         catch (SQLException e) {
-            System.out.println("Erro na inserção: ");
+            res = "Erro na Exclusão: " +e;
             throw new RuntimeException(e);
         }
 
+        return res;
     }
 
-
-
-    public void excluirAluno(Aluno aluno){
-        System.out.println("Excluíndo...");
-        String sql = "DELETE FROM tb_aluno WHERE al_cpf = ?";
+    public String atualizarAluno(Aluno aluno){
+        System.out.println("Atualizando...");
+        String sql = "UPDATE tb_aluno SET al_nome = ?, al_nascimento = ?, al_peso = ?, al_altura = ? WHERE al_cpf = ?";
+        String res = "";
         try {
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, aluno.getCpf());
-            stmt.execute();
+            stmt.setString(1, aluno.getNome());
+
+            LocalDate dataNascimento = LocalDate.parse(aluno.getDataNascimento(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            stmt.setString(2, dataNascimento.toString());
+
+            stmt.setDouble(3, aluno.getPeso());
+            stmt.setDouble(4, aluno.getAltura());
+            stmt.setString(5, aluno.getCpf());
+            stmt.executeUpdate();
             stmt.close();
 
-            System.out.println("Exclusão Concluída!");
+            res = "Atualização Concluída!";
         }
+
         catch (SQLException e) {
-            System.out.println("Erro na Exclusão: ");
+            res = "Erro na Exclusão: " + e;
             throw new RuntimeException(e);
         }
+
+        return res;
     }
 
-    public void atualizarAluno(Aluno aluno){
-        System.out.println("Excluíndo...");
-        String sql = "DELETE FROM tb_aluno WHERE al_cpf = ?";
-        try {
-            PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, aluno.getCpf());
-
-            System.out.println("Exclusão Concluída!");
-        }
-        catch (SQLException e) {
-            System.out.println("Erro na Exclusão: ");
-            throw new RuntimeException(e);
-        }
-    }
-    public void consultarAluno(Aluno aluno){
+    public String consultarAlunos() {
         System.out.println("Consultando...");
-        String sql = "SELECT * FROM tb_aluno WHERE al_cpf =  ?";
+        String sql = "SELECT * FROM tb_aluno";
+        String res = "";
         try {
             PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, aluno.getCpf());
             ResultSet rs = stmt.executeQuery();
 
             System.out.println("Consulta Concluída! Verifique o resultado abaixo: ");
 
-            if(rs.next()){
+            while (rs.next()) {
+
                 String cpf = rs.getString("al_cpf");
                 String nome = rs.getString("al_nome");
-                String data = rs.getString("al_nascimento");
-                double altura = rs.getDouble("al_altura");
-                double peso = rs.getDouble("al_peso");
 
-                System.out.println("-------------------");
-                System.out.println("CPF: " + cpf);
-                System.out.println("Nome: " + nome);
-                System.out.println("Data de Nascimento: " + data);
-                System.out.println("Altura: " + altura);
-                System.out.println("Peso: " + peso);
-            }
-            else{
-                System.out.println("Nenhum aluno com este CPF.");
+                LocalDate dataMysql = LocalDate.parse(rs.getString("al_nascimento"));
+                String data = dataMysql.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+                String altura = rs.getString("al_altura");
+                String peso = rs.getString("al_peso");
+
+                res += nome + ", " + data + ", " + cpf + ", " + peso + ", " + altura + "\n";
             }
 
             stmt.close();
 
-        }
-        catch (SQLException e) {
-            System.out.println("Erro na Consulta: ");
+        } catch (SQLException e) {
+            res = "Erro na Consulta: " + e;
             throw new RuntimeException(e);
         }
+
+        return res;
     }
 }

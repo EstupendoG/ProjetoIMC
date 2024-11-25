@@ -63,7 +63,7 @@ public class Aluno {
         this.altura = altura;
     }
 
-    public void calculaIMC() throws IOException {
+    public String calculaIMC() throws IOException {
         DecimalFormat df = new DecimalFormat("#.#");
         Double imc = peso / Math.pow(altura, 2);
         String imcString = df.format(imc);
@@ -72,7 +72,9 @@ public class Aluno {
         String condicaoAluno = defineIMC(imc);
 
         //Registra as informações
-        registraIMC(imcString, condicaoAluno);
+        String res = registraIMC(imcString, condicaoAluno);
+
+        return res;
     }
 
     public String defineIMC(double imc){
@@ -99,7 +101,7 @@ public class Aluno {
         return condicao;
     }
 
-    public void registraIMC(String imc, String condicao) throws IOException {
+    public String registraIMC(String imc, String condicao) throws IOException {
 
         //Pega a data em que o código é executado e formata
         LocalDate dataAtual = LocalDate.now();
@@ -116,7 +118,7 @@ public class Aluno {
         }
 
         //Verifica se o arquivo
-        File registro = new File(diretorio, "registro-"+cpf+".txt");
+        File registro = new File(diretorio, "registro"+cpf+".txt");
         if(!registro.exists()){
             registro.createNewFile();
             System.out.println("Criando o Registro...");
@@ -135,7 +137,6 @@ public class Aluno {
         escritor.newLine();
         escritor.close();
 
-        System.out.println("Registro Concluído!");
-        System.out.println("");
+        return "Registro do cálculo do IMC guardado em: " + diretorio + "/registro"+cpf+".txt" ;
     }
 }
