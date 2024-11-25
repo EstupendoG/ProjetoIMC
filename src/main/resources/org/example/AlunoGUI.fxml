@@ -8,125 +8,125 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gui.AlunoGUIController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gui.AlunoGUIController">
    <children>
-      <Label alignment="TOP_LEFT" layoutX="40.0" layoutY="25.0" prefHeight="123.0" prefWidth="242.0" style="-fx-wrap-text: true; -fx-line-spacing: -10;" text="INDÍCE MASSA CORPORAL" textFill="WHITE" textOverrun="CLIP">
+      <Label alignment="TOP_LEFT" layoutX="68.0" layoutY="50.0" prefHeight="281.0" prefWidth="484.0" style="-fx-wrap-text: true; -fx-line-spacing: -23;" text="INDÍCE MASSA CORPORAL" textFill="WHITE" textOverrun="CLIP">
          <font>
-            <Font name="Century Schoolbook Bold" size="37.0" />
+            <Font name="Century Schoolbook" size="83.0" />
          </font></Label>
-      <Label layoutX="42.0" layoutY="149.0" text="Faça o Cálculo:" textFill="WHITE">
+      <Label layoutX="75.0" layoutY="327.0" text="FAÇA O CÁLCULO" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="19.0" />
+            <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <TextField fx:id="nomeField" layoutX="40.0" layoutY="216.0" maxHeight="22.0" minHeight="0.0" prefHeight="21.0" prefWidth="242.0" promptText="Digite aqui" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+      <TextField fx:id="nomeField" layoutX="75.0" layoutY="459.0" maxHeight="42.0" minHeight="0.0" prefHeight="42.0" prefWidth="484.0" promptText="Digite aqui" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <Label layoutX="40.0" layoutY="198.0" prefHeight="17.0" prefWidth="242.0" text="Nome" textFill="WHITE">
+      <Label layoutX="75.0" layoutY="428.0" prefHeight="17.0" prefWidth="242.0" text="Nome" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="12.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="dataField" layoutX="40.0" layoutY="261.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="119.0" promptText="DD/MM/YYYY" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+      <TextField fx:id="dataField" layoutX="75.0" layoutY="539.0" maxHeight="44.0" minHeight="0.0" prefHeight="44.0" prefWidth="238.0" promptText="DD/MM/YYYY" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Label layoutX="40.0" layoutY="243.0" prefHeight="17.0" prefWidth="120.0" text="Nascimento" textFill="WHITE">
+      <Label layoutX="75.0" layoutY="508.0" prefHeight="17.0" prefWidth="120.0" text="Nascimento" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="12.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="cpfField" layoutX="162.0" layoutY="261.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="119.0" promptText="00000000000" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+      <TextField fx:id="cpfField" layoutX="321.0" layoutY="539.0" maxHeight="44.0" minHeight="0.0" prefHeight="44.0" prefWidth="238.0" promptText="00000000000" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Label layoutX="162.0" layoutY="243.0" prefHeight="17.0" prefWidth="119.0" text="CPF" textFill="WHITE">
+      <Label layoutX="321.0" layoutY="508.0" prefHeight="17.0" prefWidth="119.0" text="CPF" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="12.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="pesoField" layoutX="40.0" layoutY="310.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="119.0" promptText="00.00" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+      <TextField fx:id="pesoField" layoutX="75.0" layoutY="626.0" maxHeight="44.0" minHeight="0.0" prefHeight="44.0" prefWidth="238.0" promptText="00.00" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Label layoutX="40.0" layoutY="292.0" prefHeight="17.0" prefWidth="120.0" text="Peso" textFill="WHITE">
+      <Label layoutX="75.0" layoutY="595.0" prefHeight="17.0" prefWidth="120.0" text="Peso" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="12.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="alturaField" layoutX="163.0" layoutY="310.0" maxHeight="22.0" minHeight="0.0" prefHeight="22.0" prefWidth="119.0" promptText="0.00" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
+      <TextField fx:id="alturaField" layoutX="321.0" layoutY="626.0" maxHeight="44.0" minHeight="0.0" prefHeight="44.0" prefWidth="238.0" promptText="0.00" style="-fx-background-color: #222226; -fx-text-fill: #c2c2c6; -fx-background-radius: 5; -fx-border-color: #112;">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <Label layoutX="163.0" layoutY="292.0" prefHeight="17.0" prefWidth="119.0" text="Altura" textFill="WHITE">
+      <Label layoutX="321.0" layoutY="595.0" prefHeight="17.0" prefWidth="119.0" text="Altura" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="12.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnEnviar" onAction="#insereDados" layoutX="216.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Enviar" textFill="WHITE">
+      <Button fx:id="btnEnviar" layoutX="444.0" layoutY="683.0" mnemonicParsing="false" onAction="#insereDados" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Enviar" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnCalcular" layoutX="157.0" layoutY="346.0" mnemonicParsing="false" onAction="#calcularImc" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Calcular" textFill="WHITE">
+      <Button fx:id="btnCalcular" layoutX="321.0" layoutY="683.0" mnemonicParsing="false" onAction="#calcularImc" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Calcular" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnAtualizar" onAction="#atualizarDados" layoutX="99.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Atualizar" textFill="WHITE">
+      <Button fx:id="btnAtualizar" layoutX="198.0" layoutY="683.0" mnemonicParsing="false" onAction="#atualizarDados" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Atualizar" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextArea fx:id="textareaOutput" layoutX="314.0" layoutY="216.0" prefHeight="116.0" prefWidth="260.0" promptText="Aguardando Saída..." style="-fx-background-color: #222226; -fx-border-radius: 10; -fx-text-fill: #aaaaaf; -fx-wrap-text: true;" stylesheets="@AlunoGUI.css">
+      <TextArea fx:id="textareaOutput" layoutX="595.0" layoutY="459.0" prefHeight="211.0" prefWidth="541.0" promptText="Aguardando Saída..." style="-fx-background-color: #222226; -fx-border-radius: 10; -fx-text-fill: #aaaaaf; -fx-wrap-text: true;" stylesheets="@AlunoGUI.css">
          <font>
-            <Font name="Helvetica" size="11.0" />
+            <Font size="18.0" />
          </font></TextArea>
-      <Label layoutX="314.0" layoutY="198.0" prefHeight="17.0" prefWidth="257.0" text="Saídas" textFill="WHITE">
+      <Label layoutX="594.0" layoutY="427.0" prefHeight="17.0" prefWidth="257.0" text="Saídas" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="12.0" />
+            <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="tnbDeletar" onAction="#excluirDados" layoutX="40.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Deletar" textFill="WHITE">
+      <Button fx:id="tnbDeletar" layoutX="75.0" layoutY="683.0" mnemonicParsing="false" onAction="#excluirDados" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Deletar" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="314.0" layoutY="346.0" mnemonicParsing="false" onAction="#exibirDados" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Exibir Dados" textFill="WHITE">
+      <Button layoutX="599.0" layoutY="683.0" mnemonicParsing="false" onAction="#exibirDados" prefHeight="41.0" prefWidth="145.0" style="-fx-background-color: #222226; -fx-border-color: #66666a; -fx-border-radius: 3;" text="Exibir Dados" textFill="WHITE">
          <font>
-            <Font name="Helvetica" size="10.0" />
+            <Font size="18.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
